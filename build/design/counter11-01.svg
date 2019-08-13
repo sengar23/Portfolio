@@ -1,0 +1,17 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="50" height="32" viewBox="0 0 50 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #323232;
+      }
+    </style>
+  </defs>
+  <title>counter11</title>
+  <g>
+    <path class="cls-1" d="M8.68,20.29V11.7l-2,.59-0.26-.62L9,10.31H9.8v10H8.68Z"/>
+    <path class="cls-1" d="M16.68,20.29V11.7l-2,.59-0.26-.62L17,10.31H17.8v10H16.68Z"/>
+    <path class="cls-1" d="M24.47,22.71V9.86h1.07V22.71H24.47Z"/>
+    <path class="cls-1" d="M32.68,20.29V11.7l-2,.59-0.26-.62L33,10.31H33.8v10H32.68Z"/>
+    <path class="cls-1" d="M40.68,20.29V11.7l-2,.59-0.26-.62L41,10.31H41.8v10H40.68Z"/>
+  </g>
+</svg>
