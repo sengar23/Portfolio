@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,400i,600,600i,700,900|Playfair+Display:400,400i,700|Special+Elite" rel="stylesheet">
+
 <!-- Place favicon.ico in the root directory -->
 
 <link rel="stylesheet" href="css/normalize.css">

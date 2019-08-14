@@ -36,13 +36,31 @@
   font-style: normal;
 }
 
-/*@font-face {
+@font-face {
   font-family: 'Gotham';
   src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-Bold.otf')  format('opentype'),
          url('../fonts/Gotham-Bold.woff') format('woff'), url('../fonts/Gotham-Bold.ttf')  format('truetype'), url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-Book.otf')  format('opentype'),
+           url('../fonts/Gotham-Book.woff') format('woff'), url('../fonts/Gotham-Book.ttf')  format('truetype'), url('../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-Medium.otf')  format('opentype'),
+         url('../fonts/Gotham-Medium.woff') format('woff'), url('../fonts/Gotham-Medium.ttf')  format('truetype'), url('../fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*
 
 @font-face {
   font-family: 'Gotham';
@@ -60,13 +78,7 @@
   font-style: italic;
 }
 */
-/*@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-Book.otf')  format('opentype'),
-           url('../fonts/Gotham-Book.woff') format('woff'), url('../fonts/Gotham-Book.ttf')  format('truetype'), url('../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
-    font-weight: 400;
-    font-style: normal;
-  }
+/*
   @font-face {
     font-family: 'Gotham';
     src: url('../fonts/Gotham-BookIta.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-BookIta.otf')  format('opentype'),
@@ -75,13 +87,7 @@
     font-style: italic;
   }
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-Medium.otf')  format('opentype'),
-         url('../fonts/Gotham-Medium.woff') format('woff'), url('../fonts/Gotham-Medium.ttf')  format('truetype'), url('../fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'Gotham';
@@ -104,7 +110,7 @@ body, html {
 body{
     font-size: 1rem; 
     color: #323232;
-    font-family: 'Inconsolata', arial, sans-serif;
+    font-family: 'Gotham', arial, sans-serif;
     font-weight: 400;
     line-height: 1.4;   
     -webkit-font-smoothing: antialiased;
@@ -2183,7 +2189,7 @@ textarea {
         padding-right: 80px;
         width: 170px;
         height: 48px;
-        font-weight: 700;
+        font-weight: 500;
         
         text-transform: uppercase;
         font-size: 1rem;
@@ -2443,7 +2449,8 @@ textarea {
     .skill-box{
         z-index: 2;
         position: absolute;
-        bottom: 20%;
+        /*bottom: 20%;*/
+        bottom: 32%;
         right: 12%;
 
     }
@@ -2452,7 +2459,7 @@ textarea {
         line-height: 2;
     }
     .skill-box p{
-        color: #8367d8;
+        color: #323232;
     }
     .skill-icon{
         width: 56px;
@@ -2460,6 +2467,13 @@ textarea {
         background-size: cover;*/
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    .skill-icon svg line
+    {
+        fill: #8367d8;
+    }
+    .skill-icon svg polyline{
+        stroke: #8367d8;
     }
 
     /* Work section*/
@@ -2890,7 +2904,7 @@ textarea {
         position: absolute;
         display: none;
         letter-spacing: 0.6px;
-        font-weight: 700;
+        font-weight: 500;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -2902,12 +2916,150 @@ textarea {
         display: block;
     }
     /* Project Detail page*/
+
+    #p-menu {
+        position: fixed;
+        width: 17.361%;
+        top: 27.777%;
+        display: flex;
+        height: 44.446%;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        opacity: 0;
+    }
+
+    #p-menu .overlay {
+        position: absolute;
+        background-color: #1a1a1a;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transition: 1s opacity ease-out;
+    }
+    #p-menu:hover .overlay {
+        opacity: .05;
+    }
+    #p-menu .p-menu-container {
+        width: 68px;
+        height: 66px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    #p-menu .p-menu-container .p-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #1a1a1a;
+        opacity: .3;
+        transition: all .5s ease-in-out;
+    }
+    #p-menu .p-menu-container .p-line.top {
+        top: 1px;
+    }
+    #p-menu .p-menu-container .p-line.middle {
+        top: 31px;
+        animation-delay: 0.1s;
+    }
+    #p-menu .p-menu-container .p-line.right {
+        display: none;
+    }
+    #p-menu .p-menu-container .p-line.bottom {
+        top: 61px;
+        animation-delay: 0.2s;
+    }
+
+    #p-menu .p-menu-container:hover .p-line{
+        opacity: 1;
+        animation: line-slide .7s cubic-bezier(.69,0,.27,1);
+    }
+    #p-menu .p-menu-container:hover .p-line.middle {
+        top: 31px;
+        animation-delay: 0.1s;
+    }
+    #p-menu .p-menu-container:hover .p-line.bottom {
+        top: 61px;
+        animation-delay: 0.2s;
+    }
+
+    @keyframes line-slide {
+        0% {
+            transform: translateX(0px);
+        }
+
+        50% {
+            transform: translateX(68px);
+        }
+        51% {
+            transform: translateX(-68px);
+        }
+        
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    #menu-back-home {
+        position: fixed;
+        width: 17.361%;
+        top: 0;
+        display: flex;
+        height: 27.777%;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        left: 0;
+        visibility: hidden;
+    }
+    #menu-back-home .p-overlay {
+        position: absolute;
+        background-color: #1a1a1a;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transition: 1s opacity ease-out;
+    }
+    #menu-back-home:hover .p-overlay {
+        opacity: .07;
+    }
+    #menu-back-home .menu-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 5;
+        opacity: .3;
+        transition: .5s opacity ease-out;
+    }
+    #menu-back-home .menu-container:hover {
+        opacity: .7;
+    }
+    #menu-back-home .menu-container a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-back{
+        width: 100px;
+    }
+    #menu-back-home .menu-container .menu-back path {
+        fill: #1a1a1a;
+    }
+    
     .project-line-wrapper{
         position: fixed;
         width: 100vw;
         height: 100vh;
         z-index: 99;
         pointer-events: none;
+        visibility: hidden;
     }
     .project-line-wrapper .p-line{
         -webkit-transition: background-color .5s ease-in-out .1s;
@@ -3051,7 +3203,7 @@ textarea {
     .intro-credit h4 {
         
         font-size: 0.875rem;
-        color: #0d0d0d;
+        color: #8367d8;
         letter-spacing: .05rem;
         display: block;
         text-transform: uppercase;
@@ -3125,7 +3277,7 @@ textarea {
     .content-main .content-section.text-section {
         text-align: center;
         margin-bottom: 160px;
-        min-height: 800px;
+        min-height: 400px;
         background-color: #fff;
         flex-direction: column;
     }
@@ -3163,12 +3315,14 @@ textarea {
         margin-bottom: 20px;
     }
     .content-main .content-section:last-of-type {
-        padding-bottom: 0;
+        padding-bottom: 160px;
         margin-bottom: 0 !important;
     }
     .content-main .content-section.full-grid {
         background-color: #f5f5f5;
         margin-bottom: 160px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
     .content-main .content-section.full-grid.background {
         background-color: #ebebeb;
@@ -3274,6 +3428,19 @@ textarea {
     .next-project .introduction-content h2 .title,
     .next-project .introduction-content h2 span.letter {
         display: inline-block;
+    }
+
+    .line-concealer-1{
+
+    }
+    .line-concealer-1:after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0px;
+        background-color: #f5f5f5;
     }
 /* ==========================================================================
    Helper classes

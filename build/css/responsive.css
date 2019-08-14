@@ -284,6 +284,15 @@
         margin: 0 auto;
         margin-top: 24px;
     }
+    .project-tile-cover{
+        width: auto;
+        height: 100%;
+    }
+
+    .project-tile-content h2 span{
+        font-size: 48px;
+        
+    }
 }
 
 @media only screen and (min-width: 568px) and (max-width : 768px) {}

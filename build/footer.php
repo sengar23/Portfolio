@@ -10,7 +10,6 @@
 <script src="js/vendor/jquery.parallax.min.js"></script>
 <script src="js/vendor/jquery.waypoints.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/work.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--<script>
