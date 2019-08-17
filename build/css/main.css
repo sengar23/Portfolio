@@ -913,6 +913,7 @@ textarea {
     .nav-item:hover .dot-txt,
     .nav-item.selected .dot-txt{
         color:#323232;
+        font-weight: 700;
     }
     .dot-part-2{
         position: absolute;
@@ -2409,7 +2410,7 @@ textarea {
         perspective: 700px;
     }
     #profile-section .bg-txt{
-        margin-right: 8%;
+        margin-right: 4%;
         margin-top: 4%;
         float: right;
     }
@@ -2418,7 +2419,7 @@ textarea {
         background-position: 0% 15%;
         right: initial;
         left: 0;
-        width: 60%;
+        width: 65%;
     }   
     .profile-wrap{
         width: 100%;
@@ -2430,7 +2431,7 @@ textarea {
         float: left;
     }
     .profile-left{
-        width: 56%;
+        width: 50%;
     }
     .profile-left p{
         margin-left: 32px;
@@ -2460,6 +2461,7 @@ textarea {
     }
     .skill-box p{
         color: #323232;
+        font-weight: 500;
     }
     .skill-icon{
         width: 56px;
@@ -2689,8 +2691,8 @@ textarea {
         right: 0;
         bottom: 0;
         margin: auto;
-        width: 40%;
-        height: 40%;
+        width: 50%;
+        height: 50%;
         cursor: pointer;
     }
     .card-link{
@@ -2758,9 +2760,10 @@ textarea {
         color: #8367d8;
         font-size: 1.5rem;
         line-height: 1.4;
+        font-weight: 500;
     }
     .txt-bottom span{
-        
+        font-weight: 700;
     }
     .discover{
         position: relative;

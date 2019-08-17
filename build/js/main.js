@@ -26,13 +26,18 @@ $(function () {
         var curr_el = $(".work-slide.active");
         var order = curr_el.data("order");
 
-        if (order < ($(".work-slide").length - 1)) {
-            order = order + 1;
-            var el = $(".work-slide")[order];
-            nav = 0;
-            $(".dot[data-order='" + order + "']").click();
-            slide_change(el, order, 1);
+        if (slideAnim) {
+            if (order < ($(".work-slide").length - 1)) {
+                slideAnim = 0;
+                order = order + 1;
+                var el = $(".work-slide")[order];
+                nav = 0;
+                $(".dot[data-order='" + order + "']").click();
+                slide_change(el, order, 1);
+            }    
         }
+
+
 
 
     });
@@ -41,15 +46,20 @@ $(function () {
         var curr_el = $(".work-slide.active");
         var order = curr_el.data("order");
 
-        if (order > 0) {
-            order = order - 1;
-            var el = $(".work-slide")[order];
-            nav = 0;
-            $(".dot[data-order='" + order + "']").click();
-            slide_change(el, order, -1);
+        if (slideAnim) {
+            if (order > 0) {
+                slideAnim = 0;
+                order = order - 1;
+                var el = $(".work-slide")[order];
+                nav = 0;
+                $(".dot[data-order='" + order + "']").click();
+                slide_change(el, order, -1);
 
-
+            }
         }
+
+
+        
 
 
     });
@@ -258,6 +268,9 @@ $(function () {
                                 slide_change(el, order, 1, 1);
 
 
+                            }
+                            else{
+                                scrollAnim = 1;
                             }
                         }
 
