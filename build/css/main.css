@@ -3445,6 +3445,38 @@ textarea {
         bottom: 0px;
         background-color: #f5f5f5;
     }
+
+/* Wave */
+
+.wave-wrap{
+    width: 100%;
+}
+.wave-wrap svg:not(.main-wave){
+    display: none;
+}
+
+/* Visit Website */
+
+.project-cta {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    z-index: 1;
+    margin-top: 144px;
+    padding-bottom: 144px;
+    color: #ccc;
+    letter-spacing: .05em;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

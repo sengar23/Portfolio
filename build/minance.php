@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Ranjeet Sengar - Access</title>
+        <title>Ranjeet Sengar - Minance Website</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,23 +64,26 @@
                             <h2 class="wrapped font-bold">
                                 <span class="title">
                                     <span class="parallaxe-wrapper">
-                                        <span class="letter" data-x="0.08" data-y="0.12" data-skew="undefined">A</span>
+                                        <span class="letter" data-x="0.08" data-y="0.12"data-skew="true">M</span>
                                     </span>
                                     <span class="parallaxe-wrapper">
-                                         <span class="letter" data-x="0.55" data-y="0.12" data-skew="undefined">C</span>
+                                         <span class="letter" data-x="0.55" data-y="0.12" data-skew="undefined">I</span>
                                     </span>
                                     <span class="parallaxe-wrapper">
-                                        <span class="letter" data-x="0.065" data-y="0.35" data-skew="true">C</span>
+                                        <span class="letter" data-x="0.2" data-y="0.35" data-skew="true">N</span>
                                     </span>
                                     <span class="parallaxe-wrapper">
-                                        <span class="letter" class="letter" data-x="0.25" data-y="0.83" data-skew="undefined">E</span>
+                                        <span class="letter" class="letter" data-x="0.25" data-y="0.83" data-skew="undefined">A</span>
                                     </span>
                                     <span class="parallaxe-wrapper">
-                                        <span class="letter" data-x="0.6" data-y="0.6" data-skew="true">S</span>
+                                        <span class="letter" data-x="0.6" data-y="0.6" data-skew="undefined" >N</span>
                                     </span>
                                     
                                     <span class="parallaxe-wrapper">
-                                        <span class="letter" data-x="0.8" data-y="0.83" data-skew="undefined">S</span>
+                                        <span class="letter" data-x="0.8" data-y="0.83" data-skew="undefined">C</span>
+                                    </span>
+                                    <span class="parallaxe-wrapper">
+                                        <span class="letter" data-x="0.67" data-y="0.21" data-skew="undefined">E</span>
                                     </span>
                                 </span>
                             </h2>
@@ -89,7 +92,7 @@
                         <span class="mask right"></span>
                         <span class="mask bottom"></span>
                         <span class="mask top"></span>
-                        <img class="project-tile-cover" alt="" src="img/projects/access/header.jpg">
+                        <img class="project-tile-cover" alt="" src="img/projects/minance-site/header.svg">
                     </div>
                 </div>
                 <div class="project-content">
@@ -99,19 +102,19 @@
                                 <div class="col-xs-9 col-xs-offset-1 col-sm-2 col-sm-offset-1 intro-credit">
                                     <h4 class="font-med">Role</h4>
                                     <ul>
-                                        <li class=" font-reg">Lead Developer</li>
+                                        <li class=" font-reg">Product Manager / UI Dev</li>
                                     </ul>
                                 </div>
                                 <div class="col-xs-9 col-xs-offset-1  col-sm-2 col-sm-offset-1 intro-credit">
                                     <h4 class="font-med">DATE</h4>
                                     <ul>
-                                        <li class=" font-reg">April, 2016</li>
+                                        <li class=" font-reg">October, 2017</li>
                                     </ul>
                                 </div>
                                 <div class="col-xs-9 col-xs-offset-1 col-sm-2 col-sm-offset-1 intro-credit">
                                     <h4 class="font-med">Agency</h4>
                                     <ul>
-                                        <li class="font-reg">FREO Labs</li>
+                                        <li class="font-reg">Minance</li>
                                     </ul>
                                 </div>
                             </div>
@@ -120,66 +123,49 @@
                                     <p class="number">01</p>
                                 </div>
                                 <div class="col-xs-9 col-sm-8 description-content">
-                                    <p class=" font-reg">Access group's mission is to provide the expertise to make the right choice for trade through access to innovation and technology, and end world hunger by 2050 by making quality protein affordable and accessible to all. We created a simple, clear, and playful website with interactive animations using GSAP animation framework</p>
+                                    <p class=" font-reg">Minance was started in 2014, it was to satisfy a gaping need in the investment space. Our country is growing and people are becoming more prosperous every year, yet most Indian investors do not have access to advanced investment solutions. The Indian wealth management industry is archaic, fragmented in its services, and often opaque.</p><br>
+
+                                    <p class=" font-reg">Minance solve these problems by proactively working to find new and innovative ways to manage your investments, consolidating your financial needs into one place, and always putting your interests front and centre.</p>
 
                                 </div>
                             </div>
                         </div>
                         <div class="content-main">
-                            <div class="full-decoration ">
-                                <div class="full-image-wrapper line-concealer-1">
-                                    <video autoplay="" loop="" muted="">
-                                        <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="img/projects/access/video-1.mp4" preload="metadata">
-                                        
-                                    </video>
-                                </div>
-                            </div>
-                            <div class="content-section row full-grid background ">
-                                <div class="full-image-wrapper col-xs-5">
-                                    <img src="img/projects/access/1.png">
-                                </div>
-                                <div class="full-image-wrapper col-xs-5">
-                                    <img src="img/projects/access/2.png">
-                                </div>
-                            </div>
-                            <div class="content-section row full-image">
-                                <div class="full-image-wrapper">
-                                    <div class="full-image-content col-xs-10 col-sm-6 col-sm-offset-2 no-gutters">
-                                        <img src="img/projects/access/3.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-section row full-image">
-                                <div class="full-image-wrapper">
-                                    <div class="full-image-content col-xs-10 col-sm-6 col-sm-offset-2 no-gutters">
-                                        <img src="img/projects/access/4.png">
-                                    </div>
-                                </div>
-                            </div>
-                            
                             <div class="content-section row full-grid background ">
                                 <div class="full-image-wrapper col-xs-10">
-                                    <img src="img/projects/access/5.png">
+                                    <img src="img/projects/minance-site/m1.png">
                                 </div>
                                 
                             </div>
-                            <div class="content-section row text-section vertical-center-wrapper">
-                                <div class="text-wrapper col-xs-10">
-
-                                    <p class="font-reg">Interesting use of natural language form for user to contact Access. In UX analytics feedback we found smoother user interaction with the form.</p>
+                            <div class="content-section row full-grid background ">
+                                <div class="full-image-wrapper col-xs-10">
+                                    <img src="img/projects/minance-site/m2.png">
+                                </div>
+                                
+                            </div>
+                            <div class="content-section row full-grid background ">
+                                <div class="full-image-wrapper col-xs-10">
+                                    <img src="img/projects/minance-site/m3.png">
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="content-section row full-image">
+                                <div class="full-image-wrapper">
+                                    <div class="full-image-content col-xs-10 col-sm-6 col-sm-offset-2 no-gutters">
+                                        <img src="img/projects/minance-site/m5.png">
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="content-section row video-section">
-                                <div class="video-wrapper col-xs-8 col-xs-offset-1">
-                                    <video autoplay="" loop="" muted="">
-                                    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="img/projects/access/video-2.mp4" preload="metadata">
-                                    
-                                    </video>
+                            <div class="content-section row full-grid background ">
+                                <div class="full-image-wrapper col-xs-10">
+                                    <img src="img/projects/minance-site/m4.png">
                                 </div>
+                                
                             </div>
+                       
 
-                            <a href="https://access.sengar19.com" target="_blank" class="project-cta">view website</a>
+                            <a href="https://minance.com" target="_blank" class="project-cta">view website</a>
 
                         </div>
                     </div>
