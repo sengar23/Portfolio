@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg class="intro-icon icon-mountain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="54" viewBox="0 0 79.4 53.9" xml:space="preserve">
+	<style>.mountain-small{stroke-dashoffset: 0;} .mountain-big{stroke-dasharray: 160;stroke-dashoffset: 0;} .mountain-snow{stroke-dasharray: 40;stroke-dashoffset: 0;}</style>
+    
+    <g fill="none" stroke= "#323232" stroke-width="3" stroke-miterlimit="10">
+        <polygon class="mountain-small"
+            points="32.3,46.5 4.7,46.5 18.5,28.1 32.3,46.5  "></polygon>
+        <polygon class="mountain-big" points="17,46.5 45.8,7.8 74.7,46.5 17,46.5">
+        </polygon>
+        <polyline class="mountain-snow"
+            points="36.7,21.8  40.8,26 45.9,20.9 54.2,29.1 59,24.3 "></polyline>
+    </g>
+</svg>
