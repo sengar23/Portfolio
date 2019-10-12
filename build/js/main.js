@@ -1,9 +1,9 @@
 "use strict";
-var circularLine = getEl("#circular-line");
-var straightLine = getEl(".straight-line");
-var circularLinePath = getEl("#circular-line-path");
-var controls = getEl(".controls");
-var dots = getAll(".dot");
+//var circularLine = getEl("#circular-line");
+//var straightLine = getEl(".straight-line");
+//var circularLinePath = getEl("#circular-line-path");
+//var controls = getEl(".controls");
+//var dots = getAll(".dot");
 var nav = 1;
 var my_split_text;
 var w_factor = win_w * 0.3;
@@ -14,66 +14,22 @@ $(function () {
     intro_anim();
 
 
-    init_work_section();
-    project_title_init();
-    $(circularLine).css("left", $(".dot.active").position().left);
+    //init_work_section();
+    //project_title_init();
+    //$(circularLine).css("left", $(".dot.active").position().left);
 
-    $("#home-section, #profile-section").parallax();
-
-
-    //Next slide change event
-    $(".work-next-btn").on("click", function (e) {
-        var curr_el = $(".work-slide.active");
-        var order = curr_el.data("order");
-
-        if (slideAnim) {
-            if (order < ($(".work-slide").length - 1)) {
-                slideAnim = 0;
-                order = order + 1;
-                var el = $(".work-slide")[order];
-                nav = 0;
-                $(".dot[data-order='" + order + "']").click();
-                slide_change(el, order, 1);
-            }    
-        }
+    $("#home-section").parallax();
 
 
-
-
+    $(".contact-btn").click(function(){
+        $(".contact-wrap").fadeIn(400);
     });
-    //Prev slide change event
-    $(".work-prev-btn").on("click", function (e) {
-        var curr_el = $(".work-slide.active");
-        var order = curr_el.data("order");
-
-        if (slideAnim) {
-            if (order > 0) {
-                slideAnim = 0;
-                order = order - 1;
-                var el = $(".work-slide")[order];
-                nav = 0;
-                $(".dot[data-order='" + order + "']").click();
-                slide_change(el, order, -1);
-
-            }
-        }
-
-
-        
-
-
-    });
-    // work dot hover functionalities
-    $(".dot").on("mouseenter", function () {
+    $(".close-icon").click(function(){
         var el = $(this);
-        var order = el.data("order");
-        project_title_hoverin(order);
+        var p = el.parent();
+        $(p).fadeOut(400);
     });
-    $(".dot").on("mouseleave", function () {
-        var el = $(this);
-        var order = el.data("order");
-        project_title_hoverout(order);
-    });
+    
 
 
 
@@ -93,214 +49,10 @@ $(function () {
                 ease: Power2.easeOut,
             });
         });
-        $(".nav-item").click(function (e) {
-            var el = $(this);
-            var section = el.data("section");
-            var current = $(".layout-home").find(".section-enabled");
-            var index_section = $('.section-layout ').index($(section));
-            var index_current = $('.section-layout ').index(current);
-            if (index_section > index_current) {
-                if (scrollAnim) {
-                    scrollAnim = 0;
-                    if ((index_section + 1) <= $('.section-layout ').length) {
-                        scrollDown(current, $(section));
-                        $(".nav-item").removeClass("selected");
-                        el.addClass("selected");
+        
+        
 
-
-                    } else {
-                        scrollAnim = 1;
-                        return false;
-                    }
-                }
-            } else {
-                if (scrollAnim) {
-                    scrollAnim = 0;
-                    if ((index_section + 1) >= 1) {
-                        scrollUp(current, $(section));
-                        $(".nav-item").removeClass("selected");
-                        el.addClass("selected");
-
-                    } else {
-                        scrollAnim = 1;
-                        return false;
-                    }
-                }
-            }
-
-        });
-        $("body").keydown(function (e) {
-            if (e.keyCode == UP) {
-                if (scrollAnim) {
-                    scrollAnim = 0;
-                    var prev_section = upScrollElems();
-                    var current_section = $(".layout-home").find(".section-enabled");
-                    if (prev_section) {
-                        scrollUp(current_section, prev_section);
-                    } else {
-                        scrollAnim = 1;
-                    }
-
-                }
-            } else if (e.keyCode == DOWN) {
-                if (scrollAnim) {
-                    scrollAnim = 0;
-                    var next_section = downScrollElems();
-                    var current_section = $(".layout-home").find(".section-enabled");
-                    if (next_section) {
-                        scrollDown(current_section, next_section);
-                    } else {
-                        scrollAnim = 1;
-                    }
-
-                }
-            } else if (e.keyCode == LEFT) {
-                if (slideAnim) {
-                    if ($(".section-enabled").hasClass("work-section")) {
-
-                        var curr_el = $(".work-slide.active");
-                        var order = curr_el.data("order");
-
-                        if (order > 0) {
-                            slideAnim = 0;
-                            order = order - 1;
-                            var el = $(".work-slide")[order];
-                            nav = 0;
-                            $(".dot[data-order='" + order + "']").click();
-                            slide_change(el, order, -1);
-
-
-                        }
-
-                    }
-                }
-
-            } else if (e.keyCode == RIGHT) {
-
-                if (slideAnim) {
-                    if ($(".section-enabled").hasClass("work-section")) {
-
-                        var curr_el = $(".work-slide.active");
-                        var order = curr_el.data("order");
-
-                        if (order < ($(".work-slide").length - 1)) {
-                            slideAnim = 0;
-                            order = order + 1;
-                            var el = $(".work-slide")[order];
-                            nav = 0;
-                            $(".dot[data-order='" + order + "']").click();
-                            slide_change(el, order, 1);
-                        }
-
-                    }
-                }
-
-
-
-            } else if (e.keyCode == ESC) {
-
-
-            } else if (e.keyCode == ENTER) {
-
-            }
-        });
-
-        var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
-
-        $('body').bind(mousewheelevt, function (e) {
-
-            var evt = window.event || e //equalize event object
-            evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible
-            var delta = evt.detail ? evt.detail * (-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
-
-            if (delta > 0) {
-                //scroll up
-                if (scrollAnim) {
-                    scrollAnim = 0;
-                    var prev_section = upScrollElems();
-                    var current_section = $(".layout-home").find(".section-enabled");
-                    if (prev_section) {
-                        if ($(current_section).hasClass("work-section")) {
-                            var curr_el = $(".work-slide.active");
-                            var order = curr_el.data("order");
-                            if (order > 0) {
-                                slideAnim = 0;
-                                order = order - 1;
-                                var el = $(".work-slide")[order];
-                                nav = 0;
-                                $(".dot[data-order='" + order + "']").click();
-                                slide_change(el, order, -1, 1);
-
-
-                            } else {
-                                scrollUp(current_section, prev_section);
-                            }
-                        } else {
-                            scrollUp(current_section, prev_section);
-                        }
-
-                    } else {
-                        scrollAnim = 1;
-                    }
-
-                }
-            } else {
-                //scroll down
-                if (scrollAnim) {
-                    console.log(3);
-                    scrollAnim = 0;
-                    var next_section = downScrollElems();
-                    var current_section = $(".layout-home").find(".section-enabled");
-                    if (next_section) {
-                        scrollDown(current_section, next_section);
-                    } else if ($(current_section).hasClass("work-section")) {
-                        if (slideAnim) {
-                            var curr_el = $(".work-slide.active");
-                            var order = curr_el.data("order");
-
-                            if (order < ($(".work-slide").length - 1)) {
-                                console.log(1);
-                                slideAnim = 0;
-                                order = order + 1;
-                                var el = $(".work-slide")[order];
-                                nav = 0;
-                                $(".dot[data-order='" + order + "']").click();
-                                slide_change(el, order, 1, 1);
-
-
-                            }
-                            else{
-                                scrollAnim = 1;
-                            }
-                        }
-
-                    } else {
-                        console.log(4);
-                        scrollAnim = 1;
-                    }
-
-                }
-
-
-            }
-        });
-
-        /* Scroll Down functionality*/
-        $(".scroll-btn").on("click", function () {
-            if (scrollAnim) {
-                scrollAnim = 0;
-                var parent = $(this).parent();
-                var next = parent.next(".section-layout");
-                if (next.length != 0) {
-                    scrollDown(parent, next);
-                } else {
-                    next = $(".home-section");
-                    scrollDown(parent, next);
-                }
-
-
-            }
-        });
+        
     } else {
 
     }
@@ -469,7 +221,7 @@ function init_work_section() {
 }
 /* Circular navigation */
 // convert nodelist into array
-dots = [].slice.call(dots);
+//dots = [].slice.call(dots);
 
 // static animation props - immutable
 var staticAnimProps = {
@@ -496,7 +248,7 @@ var dynamicAnimProps = {
 }
 
 // loop dots array
-dots.forEach(function (dot, index, array) {
+/*dots.forEach(function (dot, index, array) {
 
     // store the array to variable
     var thisArray = array;
@@ -561,7 +313,7 @@ dots.forEach(function (dot, index, array) {
 
     });
 
-});
+});*/
 
 // animate the circular and line
 function animateLine(staticAnimProps, dynamicAnimProps) {

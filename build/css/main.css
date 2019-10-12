@@ -22,6 +22,7 @@
 #938ed7 - liliac
 #8367d8 - liliac 2
 #c6bd87 - golden yellow
+#0AC8A9 - Dark green
 */
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -296,9 +297,185 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-    /*Grid*/
+.site-logo{
+    display: block;
+    width: 40px;
+    position: absolute;
+    left: 48px;
+    top:32px;
+    z-index: 1;
+}
+.site-logo img{
+    width: 100%;
+}
+.const-msg{
+    position: absolute;
+    z-index:2;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #0AC8A9;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 300;
+}
+.contact-wrap{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #272727;
+    display: none;
+}
+.copy-1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    margin-bottom: 96px;
+    margin-top: 128px;
+    text-align: center;
+}
+.copy-1:after{
+    content: "";
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #0AC8A9;
+    bottom: -20px;
+    left: 20px;
+}
+.contact-list{
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 64px;
+    text-align: center;
 
-    .col-auto,
+}
+.contact-list li{
+    display: inline-block;
+    margin: 0 32px;
+    position: relative;
+}
+.contact-list li a{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #8367d8;
+}
+.contact-list li a:hover{
+    color: #0AC8A9;
+}
+.contact-list li::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #666;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: -40px;
+}
+.contact-list li:last-child::before{
+    display: none;
+}
+.close-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    right: 48px;
+    top: 32px;
+    z-index: 1;
+    -webkit-transition: 0.25s cubic-bezier(0.62,0.02,0.34,1);
+    
+    transition: 0.25s cubic-bezier(0.62,0.02,0.34,1);
+}
+.close-icon span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+.close-icon span::before, 
+.close-icon span::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #0AC8A9;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transition: 0.34s cubic-bezier(0.52,0.01,0.16,1);
+    
+    transition: 0.34s cubic-bezier(0.52,0.01,0.16,1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.close-icon span:nth-child(1)::before {
+    -webkit-transform: rotate(45deg) translateX(0) scaleX(1);
+    -moz-transform: rotate(45deg) translateX(0) scaleX(1);
+    -ms-transform: rotate(45deg) translateX(0) scaleX(1);
+    -o-transform: rotate(45deg) translateX(0) scaleX(1);
+    transform: rotate(45deg) translateX(0) scaleX(1);
+    -webkit-transition-delay: 0.12s;
+    
+    transition-delay: 0.12s;
+}
+.close-icon span:nth-child(1)::after {
+    -webkit-transform: rotate(-45deg) translateX(0) scaleX(1);
+    transform: rotate(-45deg) translateX(0) scaleX(1);
+    -webkit-transition-delay: 0.22s;
+    transition-delay: 0.22s;
+}
+.close-icon span:nth-child(2)::before {
+    -webkit-transform: rotate(45deg) translateX(-70%) scaleX(0);
+    transform: rotate(45deg) translateX(-70%) scaleX(0);
+}
+.close-icon span:nth-child(2)::after {
+    -webkit-transform: rotate(-45deg) translateX(-70%) scaleX(0);
+    transform: rotate(-45deg) translateX(-70%) scaleX(0);
+}
+.close-icon:hover span::before, 
+.close-icon:hover span::after {
+    background-color: #fff;
+}
+.close-icon:hover span:nth-child(1)::before, 
+.close-icon:hover span:nth-child(1)::after {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.close-icon:hover span:nth-child(1)::before {
+    -webkit-transform: rotate(45deg) translateX(70%) scaleX(0);
+    transform: rotate(45deg) translateX(70%) scaleX(0);
+}
+
+.close-icon:hover span:nth-child(1)::after {
+    -webkit-transform: rotate(-45deg) translateX(70%) scaleX(0);
+    transform: rotate(-45deg) translateX(70%) scaleX(0);
+}
+.close-icon:hover span:nth-child(2)::before {
+    -webkit-transform: rotate(45deg) translateX(0) scaleX(1);
+    transform: rotate(45deg) translateX(0) scaleX(1);
+    -webkit-transition-delay: 0.22s;
+    transition-delay: 0.22s;
+}
+.close-icon:hover span:nth-child(2)::after {
+    -webkit-transform: rotate(-45deg) translateX(0) scaleX(1);
+    transform: rotate(-45deg) translateX(0) scaleX(1);
+    -webkit-transition-delay: 0.32s;
+    transition-delay: 0.32s;
+}
+
+
+ /*Grid*/
+.col-auto,
 .col-xs-1,
 .col-xs-2,
 .col-xs-3,
@@ -2191,9 +2368,8 @@ textarea {
         width: 170px;
         height: 48px;
         font-weight: 500;
-        
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.875rem;
         text-align: left;
         color: #323232;
         line-height: 0.8;
@@ -2212,7 +2388,7 @@ textarea {
         top: 50%;
         right: 20px;
         width: 40px;
-        height: 2px;
+        height: 3px;
         margin-top: -1px;
     }
     .btn-dash{
@@ -2266,7 +2442,7 @@ textarea {
     }
     .btn-rect-1{
         stroke: #323232;
-        stroke-width: 4px;
+        stroke-width: 6px;
         stroke-dasharray: 130 190;
         stroke-dashoffset: -85;
     }
@@ -2287,15 +2463,12 @@ textarea {
     .resume-btn,
     .contact-btn{
         position: absolute;
-        top: 48px;
+        top: 32px;
         z-index: 1;
         right: 48px;
         margin: 0;
     }
-    .contact-btn{
-        left: 48px;
-        right: initial;
-    }
+    
     .scroll-btn{
         position: absolute;
         z-index:2;

@@ -149,14 +149,23 @@
     .heading {
         font-size: 16px;
     }
+    .site-logo {
+        width: 30px;
+        left: 20px;
+        top: 20px;
+    }
+    .const-msg{
+        font-size: 1rem;
+    }
 
     .ronin-btn {
         height: 40px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         line-height: 0.1;
-        width: 140px;
+        width: 150px;
         top: 20px;
         z-index: 1;
+
     }
 
     .resume-btn {
@@ -165,7 +174,8 @@
 
     .contact-btn {
         margin-top: 0px;
-        left: 20px;
+        right: 20px;
+        top: 20px;
     }
 
     .ronin-btn.btn-big {
@@ -292,6 +302,20 @@
     .project-tile-content h2 span{
         font-size: 48px;
         
+    }
+    .contact-list{
+        margin-top: 0;
+    }
+    .contact-list li {
+        display: block;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+    .contact-list li a {
+        font-size: 1.2rem;
+    }
+    .contact-list li::before{
+        display: none;
     }
 }
 
