@@ -844,6 +844,17 @@ textarea {
         visibility: hidden;
     }
     /* Page Navigation*/
+    .header-nav{
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
     .page-nav {
         position: absolute;
         z-index: 1;
@@ -1860,7 +1871,7 @@ textarea {
     }
     .bg-txt{
         font-size: 9rem;
-        color: #efefee;
+        color: #e3e3e1;
         margin-left: 4%;
         margin-top: 8%;
         line-height: 90%;
@@ -2174,7 +2185,7 @@ textarea {
     .heading-wrap{
         position: absolute;
         left:48px;
-        bottom: 32%;
+        bottom: 40%;
         z-index: 2;
     }
     .heading{
@@ -2188,10 +2199,9 @@ textarea {
         background: transparent;
         padding: 20px 28px;
         padding-right: 80px;
-        width: 170px;
+        width: 205px;
         height: 48px;
         font-weight: 500;
-        
         text-transform: uppercase;
         font-size: 1rem;
         text-align: left;
@@ -2199,12 +2209,12 @@ textarea {
         line-height: 0.8;
         -webkit-transition: opacity .45s ease-out;
         transition: opacity .45s ease-out;
-        margin: 0;
+        margin: 20px;
         text-decoration: none;
         cursor: pointer;
     }
     .ronin-btn.btn-big{
-        width: 205px;
+        width: 305px;
     }
     .btn-dash-wrap{
         position: absolute;
@@ -2284,7 +2294,7 @@ textarea {
     }
   
   
-    .resume-btn,
+    /*.resume-btn,
     .contact-btn{
         position: absolute;
         top: 48px;
@@ -2295,7 +2305,7 @@ textarea {
     .contact-btn{
         left: 48px;
         right: initial;
-    }
+    }*/
     .scroll-btn{
         position: absolute;
         z-index:2;
