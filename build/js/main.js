@@ -372,7 +372,8 @@ function slide_change(el, order, direction, scroll) {
                 $(".work-slide").each(function (index, element) {
                     TweenMax.to($(element).find(".card-link"), 0.5, {
                         y: function (index, target) {
-                            var pos = target._gsTransform.y; //Current y value
+                           
+                            var pos = gsap.getProperty(target, "y"); //Current y value 
                             pos = pos + (w_factor * diff);
                             if (pos >= 0) {
                                 pos = 0;
@@ -381,7 +382,7 @@ function slide_change(el, order, direction, scroll) {
                         },
                         z: 0.1,
                         rotation: function (index, target) {
-                            var r = target._gsTransform.rotation; //Current y value
+                            var r = gsap.getProperty(target, "rotation"); //Current y value 
                             r = r + (32 * diff);
                             if (r >= 0) {
                                 r = 0;
@@ -392,7 +393,7 @@ function slide_change(el, order, direction, scroll) {
                     });
                     TweenMax.to($(element).find(".img-avatar"), 0.5, {
                         y: function (index, target) {
-                            var pos = target._gsTransform.y; //Current y value
+                            var pos = gsap.getProperty(target, "y"); //Current y value
                             pos = pos - (w_factor * diff);
                             if (pos <= 0) {
                                 pos = 0;
@@ -401,7 +402,7 @@ function slide_change(el, order, direction, scroll) {
                         },
                         z: 0.1,
                         rotation: function (index, target) {
-                            var r = target._gsTransform.rotation; //Current y value
+                            var r = gsap.getProperty(target, "rotation"); //Current y value
                             r = r - (38 * diff);
                             if (r <= 0) {
                                 r = 0;
@@ -622,9 +623,9 @@ function animateLine(staticAnimProps, dynamicAnimProps) {
             scaleX: 1,
 
             onComplete: function () {
-
+                console.log(this);
                 // straight line animation direction changes to the opposite
-                this.target.style.transformOrigin = dynamicAnimProps.direction;
+                this._targets[0].style.transformOrigin = dynamicAnimProps.direction;
 
                 // move circular line position to the clicked dot position
                 circularLine.style.left = dynamicAnimProps.circularLinePos + "px";

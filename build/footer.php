@@ -1,12 +1,10 @@
-<script src="js/vendor/jquery-3.3.1.min.js"></script>
+<script src="js/vendor/jquery-3.4.1.min.js"></script>
 <script src="js/vendor/perfect-scrollbar.jquery.min.js"></script>
-<script src="js/vendor/jquery.gsap.min.js"></script>
-<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/gsap.min"></script>
 <script src="js/vendor/DrawSVGPlugin.min.js"></script>
 <script src="js/vendor/SplitText.min.js"></script>
 <script src="js/vendor/ScrollToPlugin.min.js"></script>
 <script src="js/vendor/MorphSVGPlugin.min.js"></script>
-<script src="js/vendor/bezier-easing.js"></script>
 <script src="js/vendor/jquery.parallax.min.js"></script>
 <script src="js/vendor/jquery.waypoints.min.js"></script>
 <script src="js/plugins.js"></script>

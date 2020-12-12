@@ -15,13 +15,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <section class="project-line-wrapper">
+        <!--<section class="project-line-wrapper">
             <span class="p-line top"></span>
             <span class="p-line right"></span>
             <span class="p-line left"></span>
             <span class="p-line bottom"></span>
-        </section>
-        <section id="menu-back-home">
+        </section>-->
+        <!--<section id="menu-back-home">
 
                 <span class="p-overlay"></span>
 
@@ -39,7 +39,8 @@
 
                 </div>
 
-        </section>
+        </section>-->
+        <?php include "work-header.php" ?>
 
         <section id="p-menu">
 
@@ -198,7 +199,7 @@
         <?php include "work-js.php" ?>
 
         <script>
-            window.scrollTo(0, 0);
+            /*window.scrollTo(0, 0);
             
             $(function(){
                 
@@ -210,11 +211,10 @@
 
                 $(window).scroll(function() {
 
-                    // Scroll the background at var speed
-                    // the yPos is a negative value because we're scrolling it UP! 
+                
                     var yPos = Math.round(-($(window).scrollTop() * 0.15));
                     TweenMax.to($(".project-tile-cover"),1, {x:0, y:yPos, z:0,force3D:true, ease:Circ.easeOut});
-                }); // window scroll Ends
+                }); 
             });
             function init_mask(){
                 var t = win_h * 0.27777 - win_h * ((1 - (680 / 900)) / 2),
@@ -308,7 +308,7 @@
                         }
                     })
                 });
-            }
+            }*/
         </script>
     </body>
 </html>

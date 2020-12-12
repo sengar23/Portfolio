@@ -84,3 +84,122 @@ function h() {
                 cancelAnimationFrame(this.handlers.run), this.reset()
             }
         }
+
+
+
+
+
+
+setTimeout(function () {
+    window.scrollTo(0, 0);
+},200);
+
+$(function(){
+    
+    init_mask();
+
+    setTimeout(function(){
+        header_bg_anim();
+    },700);
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP! 
+        var yPos = Math.round(-($(window).scrollTop() * 0.15));
+        TweenMax.to($(".project-tile-cover"),1, {x:0, y:yPos, z:0,force3D:true, ease:Circ.easeOut});
+    }); // window scroll Ends
+});
+function init_mask(){
+    var t = win_h * 0.27777 - win_h * ((1 - (680 / 900)) / 2),
+        e = win_w * 0.17361 - win_w * ((1 - (1055 / 1245)) / 2);
+
+        TweenMax.set($(".mask.top"), {
+            y: -t,
+            force3D: "auto",
+            ease: Power2.easeInOut
+        }), TweenMax.set($(".mask.bottom"), {
+            y: t,
+            force3D: "auto",
+            ease: Power2.easeInOut
+        }), TweenMax.set($(".mask.left"), {
+            x: -e,
+            force3D: "auto",
+            ease: Power2.easeInOut
+        }), TweenMax.set($(".mask.right"), {
+            x: e,
+            force3D: "auto",
+            ease: Power2.easeInOut
+        })
+}
+function header_bg_anim(){
+    TweenMax.to($(".project-tile-cover"), 1, {
+        autoAlpha: 0.8,
+        ease: Power2.easeInOut
+    }), TweenMax.to($(".mask.top"), 0.75, {
+        y: 0,
+        force3D: "auto",
+        ease: Power2.easeOut
+    }), TweenMax.to($(".mask.bottom"), 0.75, {
+        y: 0,
+        force3D: "auto",
+        ease: Power2.easeOut
+    }), TweenMax.to($(".mask.left"), 0.5, {
+        x: 0,
+        force3D: "auto",
+        ease: Power2.easeOut
+    }), TweenMax.to($(".mask.right"), 0.5, {
+        x: 0,
+        force3D: "auto",
+        ease: Power2.easeOut,
+        onComplete: function() {
+            $(".project-tile-cover").addClass("bw");
+            animate_letter();
+            
+            /*TweenLite.to($(".project-line-wrapper, #menu-back-home, #p-menu"),0.3,{
+                autoAlpha:1
+            })*/
+            
+        }
+    });
+}
+function animate_letter(){
+    var t = (100 - 2 * 17.361) * win_w / 100,
+        e = 17.361 * win_w / 100,
+        i = 12.223 * win_h / 100,
+        r = 600 / 900 * win_h;
+    
+    $(".project-tile-content .letter").each(function(n, s) {
+        var o = $(s).data("x"),
+            l = $(s).data("y"),
+            u = $(s).data("skew"),
+            h = s.getBoundingClientRect(),
+            c = 110 / 42;
+            console.log(u);
+        if (isMobile.any) var c = 2;
+        var d = t * o,
+            p = r * l,
+            f = h.left - e - (h.width * c - h.width) / 2,
+            m = h.top - i - (h.height * c - h.height) / 2;
+        TweenMax.to(s, .8, {
+            skewX:  u == true ? -10 : 0,
+            autoAlpha: .3,
+            x: (-f + d) * c,
+            y: (-m + p) * c,
+            z: 0,
+            scaleX: c,
+            scaleY: c,
+            force3D: "auto",
+            ease: Power2.easeInOut,
+            onComplete:function(){
+                TweenLite.to($(window), 0.7, {
+                    delay:0.3,
+                    scrollTo: {
+                        y: 200,
+                        autoKill: true
+                    }
+                });
+            }
+        })
+    });
+}

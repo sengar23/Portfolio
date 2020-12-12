@@ -807,12 +807,12 @@ textarea {
         background-color: #fff;
     }
     .associate {
-        left: 20px;
+        left: 40px;
         position: absolute;
-        top: 20px;
+        top: 40px;
         background: transparent;
-        bottom: 20px;
-        right: 20px;
+        bottom: 40px;
+        right: 40px;
     }
     .context3D {
         -webkit-perspective: 800px;
@@ -1871,12 +1871,14 @@ textarea {
     }
     .bg-txt{
         font-size: 9rem;
-        color: #e3e3e1;
+        /*color: #e3e3e1;*/
+        color: #f1f1f1;
         margin-left: 4%;
         margin-top: 8%;
         line-height: 90%;
         text-transform: uppercase;
         white-space: nowrap;
+        text-shadow: 0px 5px 40px rgba(0,0,0,0.2);
     }
     .bg-triangle{
         position: absolute;
@@ -2474,11 +2476,14 @@ textarea {
         font-weight: 500;
     }
     .skill-icon{
-        width: 56px;
+        width: 64px;
         /*background-image: url(../img/skill.svg);
         background-size: cover;*/
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    .skill-icon img{
+        width: 100%;
     }
     .skill-icon svg line
     {
@@ -3077,8 +3082,7 @@ textarea {
     .project-line-wrapper .p-line{
         -webkit-transition: background-color .5s ease-in-out .1s;
         transition: background-color .5s ease-in-out .1s;
-        background-color: #323232;
-        opacity: 0.2;
+        background-color: rgba(26, 26, 26, 0.05);
         position: absolute;
         display: block;
     }
@@ -3485,7 +3489,63 @@ textarea {
     text-decoration: none;
 }
 
+header{
+    display: block;
+}
+.navbar{
+    padding: 0 40px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    position: fixed;
+    height: 75px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+.navbar.nav-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px 0px;
+}
 
+.site-logo {
+    display: block;
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+}
+.site-logo img {
+    width: 100%;
+}
+
+.main-footer {
+    left: 90px;
+    position: absolute;
+    top: auto;
+    bottom: 58px;
+    position: fixed;
+    z-index: 40;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.main-footer .caret {
+    color: #6b6b6b;
+    display: inline-block;
+    zoom: 1;
+    margin: 0 20px 0 0;
+}
+.contact-link{
+    color: #8367d8;
+    display: inline-block;
+}
 
 /* ==========================================================================
    Helper classes
