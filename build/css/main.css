@@ -2454,7 +2454,7 @@ textarea {
     .card-box{
         width: 300px;
         padding: 24px;
-        background-color: rgba(255,255,255,0.75);
+        background-color: rgba(255,255,255,0.85);
         -webkit-box-shadow: 0.9375rem 0.9375rem 4.6875rem 0 rgba(0,0,0,.25);
         box-shadow: 0.9375rem 0.9375rem 4.6875rem 0 rgba(0,0,0,.25);
     }
@@ -2476,7 +2476,7 @@ textarea {
         font-weight: 500;
     }
     .skill-icon{
-        width: 64px;
+        width: 144px;
         /*background-image: url(../img/skill.svg);
         background-size: cover;*/
         margin: 0 auto;
@@ -3529,7 +3529,7 @@ header{
     left: 90px;
     position: absolute;
     top: auto;
-    bottom: 58px;
+    bottom: 32px;
     position: fixed;
     z-index: 40;
     font-size: 0.75rem;
